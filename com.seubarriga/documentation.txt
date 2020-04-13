@@ -1,0 +1,14 @@
+Dado Acesse o site pelo endereco: "https://seubarriga.wcaquino.me/"
+E Entre na pagina de login.
+E nos campos, preencher com email e senha validos.
+E clique no botao de entrar.
+E No menu contas, adicionar usuario.
+E no campo de texto preencher com o nome.
+E verificando sucesso na adicao, criar movimentacao;
+E preenchendo todos os campos obrigatorios.
+E ao verificar mensagem de sucesso na criacao de movimentacao.
+E excluir movimentacao.
+E Excluir conta ativa.
+Quando Apresentar mensagem de sucesso.
+Entao excluir a conta.
+
