@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import tasks.CriacaoDeContaTask;
 import tasks.CriacaoDeMovimentacaoTask;
 import tasks.LoginTask;
+import tasks.ResumoMensalTask;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,6 +24,8 @@ import java.util.concurrent.TimeUnit;
 
     private CriacaoDeMovimentacaoTask criacaoDeMovimentacaoTask;
 
+    private ResumoMensalTask resumoMensalTask;
+
     @BeforeEach
     public void setup() {
         WebDriverManager.chromedriver().setup();
@@ -33,6 +36,7 @@ import java.util.concurrent.TimeUnit;
         this.loginTask = new LoginTask(driver);
         this.criacaoDeContaTask = new CriacaoDeContaTask(driver);
         this.criacaoDeMovimentacaoTask = new CriacaoDeMovimentacaoTask(driver);
+        this.resumoMensalTask = new ResumoMensalTask(driver);
     }
 
     @Test
@@ -40,12 +44,13 @@ import java.util.concurrent.TimeUnit;
 loginTask.logar();
 criacaoDeContaTask.criarConta();
 criacaoDeMovimentacaoTask.criarMovimentacao();
+resumoMensalTask.excluirResumoMensal();
     }
 
     @AfterEach
     public void teardown() {
         if (driver != null) {
-            //driver.quit();
+            driver.quit();
         }
 
     }
